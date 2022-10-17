@@ -3,6 +3,7 @@ const row = document.querySelector(".row");
 
 // play btn
 playBtn.addEventListener("click", function () {
+  row.innerHTML = "";
   //grab option value from DOM
   let difficulty = document.getElementById("difficulty").value;
   console.log(difficulty, typeof difficulty);
@@ -17,8 +18,9 @@ playBtn.addEventListener("click", function () {
   }
 
   // generate an array of given number size (1-100/1-81/1-49)
-  let numbersArray = [];
+  let numbersArray;
   numbersArray = generateOrderedArray(squaresNr);
+
   // create a square element for each iteration
   for (let i = 0; i < numbersArray.length; i++) {
     const thisNr = numbersArray[i];
@@ -27,12 +29,10 @@ playBtn.addEventListener("click", function () {
     thisSquare.addEventListener("click", SquareClickMessage);
     // put the squares into .row
     row.append(thisSquare);
-
     // display modes classes
     if (difficulty === "easy") {
       thisSquare.classList.add("easy");
     } else if (difficulty === "medium") {
-      thisSquare.classList.remove("easy");
       thisSquare.classList.add("medium");
     } else if (difficulty === "difficult") {
       thisSquare.classList.add("difficult");
