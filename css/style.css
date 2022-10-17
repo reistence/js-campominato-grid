@@ -55,12 +55,23 @@ main {
 }
 
 .square {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.easy {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+.medium {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+.difficult {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
 }
 
 footer {
