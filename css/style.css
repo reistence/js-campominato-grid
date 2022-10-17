@@ -60,6 +60,9 @@ main {
   justify-content: center;
   align-items: center;
 }
+.active {
+  background-color: dodgerblue;
+}
 
 .easy {
   width: calc(100% / 10);
